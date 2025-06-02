@@ -1,10 +1,79 @@
+
 .App-Product-Container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f9fa; 
+}
+
+h1 {
+  color: #007F73;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+h2 {
+  color: #00796b;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .App-Product-Box {
     margin: 10px;
-    padding: 10px;
-    background-color: yellow;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffc107, #ff9800); 
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    width: 200px;
 }
+
+
+.App-Product-Box:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.App-Product-Box h2 {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+.App-Product-Box h3 {
+    color: #00796b; 
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+
+.App-Product-Box button {
+    padding: 10px 16px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+.App-Product-Box button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
