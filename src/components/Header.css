@@ -1,3 +1,49 @@
-.App-Header-Row{
-    background-color: orange;
+.App-Header-Row {
+    background: linear-gradient(135deg, #00A19D, #007F73);
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
 }
+
+.App-Header-Row h1 { 
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.App-Header-Row link {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 18px;
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.App-Header-Row a {
+  display: inline-block;
+  color: #ffffff;
+  background: linear-gradient(135deg, #D7263D, #FF6B6B); 
+  font-weight: bold;
+  text-decoration: none;
+  padding: 4px 6px;
+  border-radius: 4%;
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+  margin: 3px;
+}
+
+.App-Header-Row a:hover {
+  background: linear-gradient(135deg, #FF3D00, #D7263D);
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+

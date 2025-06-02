@@ -4,9 +4,11 @@ import "./Header.css";
 export default function Header() {
   return (
     <div className="App-Header-Row">
-      <h1 style={{ backgroundColor: "yellow", color: "blue" }}>
+      <h1>
         React Lessons
       </h1>
+      <hr/>
+      <br/>
       <Link to="/">App1</Link>-<Link to="/app2">App2</Link>-
       <Link to="/app3">App3</Link>-
       <Link to="/app4">App4</Link>-
