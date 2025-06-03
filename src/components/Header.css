@@ -11,6 +11,8 @@
     font-size: 2.5rem;
     font-weight: bold;
     padding: 10px;
+    color: #FFD700;
+    text-shadow: 1px 2px 8px rgba(0, 127, 115, 0.15);
     transition: transform 0.3s ease-in-out;
 }
 
