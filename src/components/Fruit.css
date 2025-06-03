@@ -1,7 +1,30 @@
 .fruit-box {
-  border: 2px solid black;
-  padding: 20px;
-  margin: 10px;
-  width: 100px;
+  background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(67, 198, 172, 0.15), 0 1.5px 4px rgba(0,0,0,0.08);
+  padding: 24px 32px;
+  margin: 20px auto;
+  max-width: 300px;
   text-align: center;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  color: #00796b;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid #43c6ac;
+}
+
+.fruit-box:hover {
+  transform: scale(1.04) rotate(-2deg);
+  box-shadow: 0 12px 32px rgba(67, 198, 172, 0.22), 0 2px 8px rgba(0,0,0,0.12);
+  background: linear-gradient(135deg, #43c6ac 0%, #f8ffae 100%);
+  color: #d7263d;
+  border-color: #f8b500;
+}
+
+.fruit-box h2 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 2px;
 }
