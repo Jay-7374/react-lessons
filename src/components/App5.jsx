@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import "./App5.css";
+
 export default function App5() {
   const [name, setName] = useState();
   const [age, setAge] = useState();
@@ -10,7 +12,7 @@ export default function App5() {
     setResult(Number(a) + Number(b));
   };
   return (
-    <div>
+    <div className="app5-container">
       <h1>App5</h1>
       <h2>useState hook</h2>
       <h3>Example 1</h3>
