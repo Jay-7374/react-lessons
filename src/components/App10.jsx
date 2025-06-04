@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import "./App10.css";
+
+const appleImg = "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce";
+const mangoImg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkjG-19CTFIEd_FuauH8y4A1S2cZugQges4g&s";
 
 export default function App10() {
-  const [products, setProducts] = useState([
+  const [products] = useState([
     { id: 1, name: "Apples", price: 23 },
     { id: 2, name: "Mangoes", price: 45 },
   ]);
@@ -40,28 +44,50 @@ export default function App10() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h2>Products</h2>
-      {products.map((product) => (
-        <div key={product.id}>
-          {product.name} - ${product.price}{" "}
-          <button onClick={() => addToCart(product)}>Add</button>
-        </div>
-      ))}
+    <div className="app10-container">
+      <h2 className="app10-title">Products</h2>
+      <div className="app10-products">
+        {products.map((product) => (
+          <div className="app10-product" key={product.id}>
+            <img
+              className="app10-product-img"
+              src={product.name === "Apples" ? appleImg : mangoImg}
+              alt={product.name}
+            />
+            <div className="app10-product-info">
+              <span className="app10-product-name">{product.name}</span>
+              <span className="app10-product-price">${product.price}</span>
+            </div>
+            <button onClick={() => addToCart(product)}>Add</button>
+          </div>
+        ))}
+      </div>
 
       <hr />
 
-      <h2>My Cart</h2>
-      {cart.length === 0 && <p>Cart is empty.</p>}
-      {cart.map((item) => (
-        <div key={item.id}>
-          {item.name} - ${item.price}{" "}
-          <button onClick={() => decrement(item.id)}>-</button>{" "}
-          {item.qty}{" "}
-          <button onClick={() => increment(item.id)}>+</button> - $
-          {item.price * item.qty}
-        </div>
-      ))}
+      <h2 className="app10-title">My Cart</h2>
+      <div className="app10-cart">
+        {cart.length === 0 && <p className="app10-cart-empty">Cart is empty.</p>}
+        {cart.map((item) => (
+          <div className="app10-cart-item" key={item.id}>
+            <img
+              className="app10-product-img"
+              src={item.name === "Apples" ? appleImg : mangoImg}
+              alt={item.name}
+            />
+            <div className="app10-product-info">
+              <span className="app10-product-name">{item.name}</span>
+              <span className="app10-product-price">${item.price}</span>
+            </div>
+            <button onClick={() => decrement(item.id)}>-</button>
+            <span style={{ margin: "0 8px" }}>{item.qty}</span>
+            <button onClick={() => increment(item.id)}>+</button>
+            <span className="app10-product-price" style={{ marginLeft: 16 }}>
+              ${item.price * item.qty}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
