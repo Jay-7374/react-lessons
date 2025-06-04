@@ -1,22 +1,23 @@
-
 import React from "react";
 import { useState } from "react";
+import "./App7.css";
+
 export default function App7() {
   const [user, setUser] = useState({});
   const [users, setUsers] = useState([]);
   const [txt, setTxt] = useState();
   const [filtered, setFiltered] = useState([]);
   const handleSubmit = () => {
-    setUsers([...users, user]);
+    setUsers([...users, { ...user, id: Date.now() }]);
   };
   const handleSearch = () => {
     setFiltered(users.filter((value) => value.city === txt));
   };
-  const handleDelete = (n) => {
-    setUsers(users.filter((value) => value.name !== n));
+  const handleDelete = (id) => {
+    setUsers(users.filter((value) => value.id !== id));
   };
   return (
-    <div>
+    <div className="app7-container">
       <h1>App7</h1>
       <h2>useState with Arrays and Objects</h2>
       <h3>Registration Form</h3>
@@ -46,9 +47,9 @@ export default function App7() {
       <ol>
         {users &&
           users.map((value) => (
-            <li key={value.name}>
+            <li key={value.id}>
               {value.name}-{value.age}-{value.city}-
-              <button onClick={() => handleDelete(value.name)}>Delete</button>
+              <button onClick={() => handleDelete(value.id)}>Delete</button>
             </li>
           ))}
       </ol>
@@ -63,7 +64,7 @@ export default function App7() {
       </p>
       <ol>
         {filtered.map((value) => (
-          <li key={value.name}>
+          <li key={value.id}>
             {value.name}-{value.age}-{value.city}
           </li>
         ))}
